@@ -1,0 +1,52 @@
+﻿@model List<Solentive.Interview.Model.Track>
+@{
+    ViewBag.Title = "Tracks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#btnAddNewTrack").on("click", function () {
+                window.location = '@Url.Action("Add", "Track")';
+            });
+        });
+    </script>
+}
+
+<div class="well">
+    <div class="row">
+        <div class=" col-md-12">
+            <h2>Tracks - List</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button id="btnAddNewTrack" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

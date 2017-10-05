@@ -1,0 +1,63 @@
+﻿@model List<Solentive.Interview.Model.Seminar>
+
+@{
+    ViewBag.Title = "Seminars";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="well">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Seminars - List</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 title">
+            Current Week Start (Monday):
+        </div>
+        <div class="col-md-2">
+            @ViewBag.WeekStart
+        </div>
+        <div class="col-md-4 title">
+            Current Week End (Sunday):
+        </div>
+        <div class="col-md-2">
+            @ViewBag.WeekEnd
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table seminar-table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Days To Go</th>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Track</th>
+                        <th>Location</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Title</td>
+                            <td>@item.Date.ToShortDateString()</td>
+                            <td>@item.DaysToGo</td>
+                            <td>@item.Code</td>
+                            <td>@item.Description</td>
+                            <td>@item.Track.Name</td>
+                            <td>@item.Location.Name</td>
+                            <td>@item.Level.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

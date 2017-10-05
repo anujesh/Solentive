@@ -1,0 +1,42 @@
+﻿
+.navbar-brand {
+    display: block;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    height: 40px;
+    width: 180px;
+    background-image: url('/Images/Logo.png');
+}
+
+.panel-group {
+    margin-bottom: 0;
+}
+
+.panel-body {
+    display: block;
+    background-color: gray;
+    padding: 0;
+    color: #FFF;
+    padding: 0;
+}
+
+    .panel-body a {
+        text-decoration: none;
+        color: #FFF;
+        display: block;
+        height: inherit;
+        width: inherit;
+        padding: 10px 15px;
+    }
+
+        .panel-body a:hover {
+            background-color: #CECECE;
+        }
+
+        .panel-body a.selected {
+            background-color: #cbdff7;
+        }
+
+.label {
+    color: #000;
+}

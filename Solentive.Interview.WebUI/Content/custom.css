@@ -1,0 +1,114 @@
+﻿/* General Styles 
+----------------------*/
+
+body {
+    font-family: Calibri, Verdana, serif;
+}
+
+h2 {
+    padding: 5px 5px 5px 0;
+    margin: 0 0 10px 0;
+}
+
+.push-right {
+    float: right;
+}
+
+.push-left {
+    float: left;
+}
+
+.push-clear {
+    clear: both;
+}
+
+.header {
+    display: block;
+    margin: 5px;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+table.seminar-table {
+    width: 1000px;
+}
+
+.title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Layout Styles 
+--------------------*/
+
+.main-content {
+    padding: 80px 5px 5px 5px;
+}
+
+/* Progress Indicator Styles
+----------------------------*/
+.page-splash-container {
+    padding-top: 25%;
+    width: 450px;
+    margin: auto;
+}
+
+.page-splash-message {
+    font-size: 18px;
+}
+
+.progress-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: Gray;
+    filter: alpha(opacity=50); /* internet explorer */
+    -khtml-opacity: 0.5; /* khtml, old safari */
+    -moz-opacity: 0.5; /* mozilla, netscape */
+    opacity: 0.5; /* fx, safari, opera */
+}
+
+.progress-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -75px;
+    margin-left: -150px;
+    z-index: 1000 !important;
+    background-color: #f5f5f5;
+    border: solid 1px #E3E3E3;
+}
+
+/* Title Styles 
+------------------------*/
+
+/* TODO: SJC CLean up. */
+/*.title1 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.title2 {
+    font-size: 1.1em;
+    font-weight: bold;
+}*/
+
+/* Header Styles 
+-------------------*/
+
+/*.login-group {
+    padding: 10px;
+    text-align: right;
+}*/
+
+/* Bootstrap Overrides 
+--------------------------*/

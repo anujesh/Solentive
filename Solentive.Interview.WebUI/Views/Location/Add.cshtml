@@ -1,0 +1,113 @@
+﻿@model Solentive.Interview.Model.Location
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    <script>
+        var formSelector = "form#addLocationForm";
+
+        $(document).ready(function () {
+            bindEvents();
+        })
+        .ajaxComplete(function() {
+            bindEvents();
+        });
+
+        function bindEvents() {
+            $("#btnCancelLocation").on("click", function (event) {
+                // Stop the form reloading.
+                event.preventDefault();
+
+                window.location = '@Url.Action("List", "Location")';
+            });
+
+            $("#btnSaveLocation").on("click", function (event) {
+                var url = '@Url.Action("Add", "Location")';
+                var formData = $(formSelector).serialize();
+                $.post(url, formData, function (data) {
+                    var form = $(data).find(formSelector);
+                    $(formSelector).html(form);
+                });
+
+                // Stop the form reloading.
+                event.preventDefault();
+            });
+
+        }
+    </script>
+}
+@using (Html.BeginForm("", "", FormMethod.Post, new { @id = "addLocationForm" }))
+{
+    <div class="well">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Locations - Add</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Name:
+            </div>
+            <div class="col-md-10">
+                @Html.TextBox("Name", Model.Name)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-10">
+                &nbsp;@Html.ValidationMessageFor(i => i.Name)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Room Number
+            </div>
+            <div class="col-md-10">
+                @Html.TextBox("RoomNumber", Model.RoomNumber)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-10">
+                &nbsp;@Html.ValidationMessageFor(i => i.RoomNumber)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Building:
+            </div>
+            <div class="col-md-10">
+                @Html.TextBox("Building", Model.Building)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-10">
+                &nbsp;@Html.ValidationMessageFor(i => i.Building)
+            </div>
+        </div>
+        @if (ViewBag.HasSaved != null && ViewBag.HasSaved)
+        {
+            <div class="row">
+                <div class="col-md-2">&nbsp;</div>
+                <div class="col-md-10">
+                    Saved Successfully
+                </div>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-12">
+                <button id="btnSaveLocation" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-ok-circle"></span>&nbsp;Save
+                </button>&nbsp;
+                <button id="btnCancelLocation" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+}

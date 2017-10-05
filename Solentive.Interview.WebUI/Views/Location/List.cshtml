@@ -1,0 +1,57 @@
+﻿@model List<Solentive.Interview.Model.Location>
+
+@{
+    ViewBag.Title = "Locations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#btnAddNewLocation").on("click", function () {
+                window.location = '@Url.Action("Add", "Location")';
+            });
+        });
+    </script>
+}
+
+<div class="well">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Locations - List</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button id="btnAddNewLocation" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Room Number</th>
+                        <th>Building</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.RoomNumber</td>
+                            <td>@item.Building</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
