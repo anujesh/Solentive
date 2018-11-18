@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solentive.Interview.WebUI", "Solentive.Interview.WebUI\Solentive.Interview.WebUI.csproj", "{42AA0878-2ACC-4253-915C-D8BB68AB6DEE}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{21FA5B0A-48BB-43BB-9784-792789FFE538}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solentive.Interview.Common", "Solentive.Interview.Common\Solentive.Interview.Common.csproj", "{52ADA299-BB95-467A-A5A8-7050A20EBF0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solentive.Interview.Logging", "Solentive.Interview.Logging\Solentive.Interview.Logging.csproj", "{61FDAB37-113C-49B1-B401-3E15EB2CC658}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{52ADA299-BB95-467A-A5A8-7050A20EBF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52ADA299-BB95-467A-A5A8-7050A20EBF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52ADA299-BB95-467A-A5A8-7050A20EBF0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61FDAB37-113C-49B1-B401-3E15EB2CC658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61FDAB37-113C-49B1-B401-3E15EB2CC658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61FDAB37-113C-49B1-B401-3E15EB2CC658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61FDAB37-113C-49B1-B401-3E15EB2CC658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,9 @@ Global
 		{C7A0E38D-5EFF-4D49-B4FA-389C1083CF03} = {8CFF753E-C1BB-49BB-BECE-1C6055B11CEB}
 		{93AE37D1-FF8C-4A18-A6E7-805AA7188CD5} = {8CFF753E-C1BB-49BB-BECE-1C6055B11CEB}
 		{52ADA299-BB95-467A-A5A8-7050A20EBF0D} = {21FA5B0A-48BB-43BB-9784-792789FFE538}
+		{61FDAB37-113C-49B1-B401-3E15EB2CC658} = {21FA5B0A-48BB-43BB-9784-792789FFE538}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DBE55E2-68DC-4769-825E-5F8ABF04C962}
 	EndGlobalSection
 EndGlobal
