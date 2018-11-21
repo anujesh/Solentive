@@ -1,0 +1,7 @@
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\bin\Debug\Solentive.Interview.Test.Integration.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\bin\Debug\Solentive.Interview.Test.Integration.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\obj\Debug\Solentive.Interview.Test.Integration.csproj.CoreCompileInputs.cache
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\obj\Debug\Solentive.Interview.Test.Integration.csproj.CopyComplete
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\obj\Debug\Solentive.Interview.Test.Integration.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Test.Integration\obj\Debug\Solentive.Interview.Test.Integration.pdb

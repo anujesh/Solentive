@@ -1,5 +1,7 @@
-﻿using Solentive.Interview.Model;
+﻿using Solentive.Interview.Logging.Interfaces;
+using Solentive.Interview.Model;
 using Solentive.Interview.Service;
+using Solentive.Interview.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,14 @@ using System.Web.Mvc;
 
 namespace Solentive.Interview.WebUI.Controllers
 {
-    public class LocationController : Controller
+    public class LocationController : BaseController
     {
-        private LocationService _locationService = null;
+        private readonly ILocationService _locationService;
 
-        public LocationController()
+        public LocationController(ILocationService locationService, ILoggingService loggingService) : base(loggingService)
         {
-            _locationService = new LocationService();
+            _locationService = locationService;
+            _loggingService = loggingService;
         }
 
         [HttpGet]
@@ -32,15 +35,15 @@ namespace Solentive.Interview.WebUI.Controllers
             return View(model);
         }
 
+
         [HttpPost]
         public ActionResult Add(Location location)
         {
             if (ModelState.IsValid)
             {
-                var result = _locationService.AddLocation(location);
-                ViewBag.HasSaved = result;
+                var status = _locationService.AddLocation(location) ? "Saved Successfully!" : "Could not Save!";
+                return Json(status);
             }
-
             return View(location);
         }
     }

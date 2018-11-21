@@ -1,5 +1,7 @@
-﻿using Solentive.Interview.Model;
+﻿using Solentive.Interview.Logging.Interfaces;
+using Solentive.Interview.Model;
 using Solentive.Interview.Service;
+using Solentive.Interview.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,14 @@ using System.Web.Mvc;
 
 namespace Solentive.Interview.WebUI.Controllers
 {
-    public class TrackController : Controller
+    public class TrackController : BaseController
     {
-        private TrackService _trackService = null;
+        private readonly ITrackService _trackService;
 
-        public TrackController()
+        public TrackController(ITrackService trackService, ILoggingService loggingService) : base(loggingService)
         {
-            _trackService = new TrackService();
+            _trackService = trackService;
+            _loggingService = loggingService;
         }
 
         [HttpGet]
@@ -37,8 +40,8 @@ namespace Solentive.Interview.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = _trackService.AddTrack(track);
-                ViewBag.HasSaved = result;
+                var status = _trackService.AddTrack(track) ? "Saved Successfully!" : "Could not Save!";
+                return Json(status);
             }
 
             return View(track);

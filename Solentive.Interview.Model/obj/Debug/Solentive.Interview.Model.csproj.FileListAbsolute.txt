@@ -1,0 +1,9 @@
+D:\Solentive\Technical-Test\Solentive.Interview.Model\bin\Debug\Solentive.Interview.Model.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Model\bin\Debug\Solentive.Interview.Model.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.Model\bin\Debug\Solentive.Interview.Common.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Model\bin\Debug\Solentive.Interview.Common.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.Model\obj\Debug\Solentive.Interview.Model.csprojAssemblyReference.cache
+D:\Solentive\Technical-Test\Solentive.Interview.Model\obj\Debug\Solentive.Interview.Model.csproj.CoreCompileInputs.cache
+D:\Solentive\Technical-Test\Solentive.Interview.Model\obj\Debug\Solentive.Interview.Model.csproj.CopyComplete
+D:\Solentive\Technical-Test\Solentive.Interview.Model\obj\Debug\Solentive.Interview.Model.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Model\obj\Debug\Solentive.Interview.Model.pdb

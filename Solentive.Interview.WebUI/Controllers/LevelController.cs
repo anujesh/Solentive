@@ -7,23 +7,26 @@ using System.Web.Mvc;
 using System.Collections;
 using Solentive.Interview.Model;
 using Solentive.Interview.Data;
+using Solentive.Interview.Service.Interfaces;
+using Solentive.Interview.Logging.Interfaces;
 
 namespace Solentive.Interview.WebUI.Controllers
 {
-    public class LevelController : Controller
+    public class LevelController : BaseController
     {
-        private SeminarDbContext _seminarDbContext = null;
+        public ILevelService _levelService;
 
-        public LevelController()
+        public LevelController(ILevelService levelService, ILoggingService loggingService) : base(loggingService)
         {
-            _seminarDbContext = new SeminarDbContext();
+            _levelService = levelService;
+            _loggingService = loggingService;
         }
 
         [HttpGet]
         public ActionResult List()
         {
             // Get the source list and map to the view model type.
-            var targetList = _seminarDbContext.Levels.ToList();
+            var targetList = _levelService.GetLevels().ToList();
             return View(targetList);
         }
 
@@ -37,13 +40,11 @@ namespace Solentive.Interview.WebUI.Controllers
         [HttpPost]
         public ActionResult Add(Level level)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                _seminarDbContext.Levels.Add(level);
-                var result = (_seminarDbContext.SaveChanges() > 0);
-                ViewBag.HasSaved = result;
+                var status = _levelService.AddLevel(level) ? "Saved Successfully!" : "Could not Save!";
+                return Json(status);
             }
-
             return View(level);
         }
     }

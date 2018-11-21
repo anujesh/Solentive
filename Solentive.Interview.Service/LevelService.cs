@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Solentive.Interview.Data;
 using System.Data.Entity;
+using Solentive.Interview.Service.Interfaces;
 
 namespace Solentive.Interview.Service
 {
-    public class LevelService
+    public class LevelService : ILevelService
     {
         private SeminarDbContext _dbContext = null;
 

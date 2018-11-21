@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Solentive.Interview.Data;
 using System.Data.Entity;
+using Solentive.Interview.Service.Interfaces;
 
 namespace Solentive.Interview.Service
 {
-    public class LocationService
+    public class LocationService : ILocationService
     {
         private SeminarDbContext _dbContext = null;
 

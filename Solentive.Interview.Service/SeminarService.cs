@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Solentive.Interview.Data;
+using Solentive.Interview.Service.Interfaces;
 
 namespace Solentive.Interview.Service
 {
-    public class SeminarService
+    public class SeminarService : ISeminarService
     {
         private SeminarDbContext _dbContext = null;
 
