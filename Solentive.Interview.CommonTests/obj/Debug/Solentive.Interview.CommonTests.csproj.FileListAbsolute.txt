@@ -1,0 +1,16 @@
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Solentive.Interview.CommonTests.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Solentive.Interview.CommonTests.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Solentive.Interview.Common.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Solentive.Interview.Common.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\obj\Debug\Solentive.Interview.CommonTests.csprojAssemblyReference.cache
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\obj\Debug\Solentive.Interview.CommonTests.csproj.CoreCompileInputs.cache
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\obj\Debug\Solentive.Interview.CommonTests.csproj.CopyComplete
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\obj\Debug\Solentive.Interview.CommonTests.dll
+D:\Solentive\Technical-Test\Solentive.Interview.CommonTests\obj\Debug\Solentive.Interview.CommonTests.pdb

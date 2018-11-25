@@ -1,1 +1,22 @@
-﻿
+﻿System.ArgumentOutOfRangeException: The added or subtracted value results in an un-representable DateTime.
+Parameter name: value
+   at System.DateTime.AddTicks(Int64 value)
+   at System.DateTime.Add(Double value, Int32 scale)
+   at System.DateTime.AddDays(Double value)
+   at Solentive.Interview.Common.DateCalculations.GetDifferenceInDays(DateTime startDate, DateTime endDate) in D:\Solentive\Technical-Test\Solentive.Interview.Common\DateCalculations.cs:line 20
+   at Solentive.Interview.Model.Seminar.get_DaysToGo() in D:\Solentive\Technical-Test\Solentive.Interview.Model\Seminar.cs:line 25
+   at ASP._Page_Views_Seminar_List_cshtml.Execute() in d:\Solentive\Technical-Test\Solentive.Interview.WebUI\Views\Seminar\List.cshtml:line 51
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)

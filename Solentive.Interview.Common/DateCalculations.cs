@@ -14,10 +14,10 @@ namespace Solentive.Interview.Common
 
             int count = 0;
             DateTime trackDate = endDate;
-            while (trackDate < endDate)
+            while (trackDate > startDate)
             {
                 count++;
-                trackDate = trackDate.AddDays(1);
+                trackDate = trackDate.AddDays(-1);
             }
             return count;
         }
@@ -35,9 +35,9 @@ namespace Solentive.Interview.Common
 
         public static DateTime GetWeekStartDate(DateTime date)
         {
-            // TODO: To be implemented.
-
-            return date;
+            DateTime result = date.Date;
+            int diff = (7 + (date.DayOfWeek - DayOfWeek.Monday)) % 7;
+            return date.AddDays(-1 * diff).Date;          
         }
     }
 }

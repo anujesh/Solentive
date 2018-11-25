@@ -3,3 +3,4 @@ D:\Solentive\Technical-Test\Solentive.Interview.Common\bin\Debug\Solentive.Inter
 D:\Solentive\Technical-Test\Solentive.Interview.Common\obj\Debug\Solentive.Interview.Common.csproj.CoreCompileInputs.cache
 D:\Solentive\Technical-Test\Solentive.Interview.Common\obj\Debug\Solentive.Interview.Common.dll
 D:\Solentive\Technical-Test\Solentive.Interview.Common\obj\Debug\Solentive.Interview.Common.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.Common\obj\Debug\Solentive.Interview.Common.csprojAssemblyReference.cache
