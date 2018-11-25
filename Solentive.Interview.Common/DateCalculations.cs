@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Solentive.Interview.Common
 {
@@ -11,7 +7,6 @@ namespace Solentive.Interview.Common
         public static int GetDifferenceInDays(DateTime startDate, DateTime endDate)
         {
             if (startDate >= endDate) return 0;
-
             int count = 0;
             DateTime trackDate = endDate;
             while (trackDate > startDate)
@@ -29,7 +24,6 @@ namespace Solentive.Interview.Common
             {
                 result = result.AddDays(7 - (int)result.DayOfWeek);
             }
-
             return result;
         }
 

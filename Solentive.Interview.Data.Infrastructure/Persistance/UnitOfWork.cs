@@ -1,11 +1,6 @@
 ﻿using Solentive.Interview.Data.Infrastructure.Repositories;
 using Solentive.Interview.Data.Infrastructure.Repositories.Interfaces;
 using Solentive.Interview.Data.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Solentive.Interview.Data.Infrastructure.Persistance
 {

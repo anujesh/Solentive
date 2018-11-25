@@ -1,14 +1,8 @@
-﻿using Solentive.Interview.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Collections;
+﻿using Solentive.Interview.Logging.Interfaces;
 using Solentive.Interview.Model;
-using Solentive.Interview.Data;
 using Solentive.Interview.Service.Interfaces;
-using Solentive.Interview.Logging.Interfaces;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace Solentive.Interview.WebUI.Controllers
 {

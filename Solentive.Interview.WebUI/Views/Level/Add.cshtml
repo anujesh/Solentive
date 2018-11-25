@@ -42,23 +42,21 @@
                 &nbsp;@Html.ValidationMessageFor(i => i.Scaling)
             </div>
         </div>
-        @if (ViewBag.HasSaved != null && ViewBag.HasSaved)
-        {
-            <div class="row">
-                <div class="col-md-2">&nbsp;</div>
-                <div class="col-md-10">
-                   Saved Successfully
-                </div>
+        <div class="row">
+            <div class="col-md-2">&nbsp;</div>
+            <div class="col-md-10">
+                <div id="divResultLevel"></div>
             </div>
-        }
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <button id="btnSaveLevel" class="btn btn-primary">
                     <span class="glyphicon glyphicon-ok-circle"></span>&nbsp;Save
                 </button>&nbsp;
-                <button id="btnCancelLevel" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Cancel
-                </button>
+                <a href="@Url.Action("List", "Level")" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    Cancel
+                </a>
             </div>
         </div>
     </div>

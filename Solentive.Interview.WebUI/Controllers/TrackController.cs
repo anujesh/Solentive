@@ -1,11 +1,6 @@
 ﻿using Solentive.Interview.Logging.Interfaces;
 using Solentive.Interview.Model;
-using Solentive.Interview.Service;
 using Solentive.Interview.Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Solentive.Interview.WebUI.Controllers
@@ -43,7 +38,6 @@ namespace Solentive.Interview.WebUI.Controllers
                 var status = _trackService.AddTrack(track) ? "Saved Successfully!" : "Could not Save!";
                 return Json(status);
             }
-
             return View(track);
         }
     }
