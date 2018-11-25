@@ -37,7 +37,7 @@ namespace Solentive.Interview.Common.Tests
         public void GetWeekEndDateTest_SundaysDate_ReturnsSameSundaysDate()
         {
             var SundayDate = new DateTime(2018, 11, 25);
-            var ExpectedDate = new DateTime(2018, 11, 19);
+            var ExpectedDate = new DateTime(2018, 11,25);
             Assert.IsTrue(DateCalculations.GetWeekEndDate(SundayDate).ToShortDateString().Equals(ExpectedDate.ToShortDateString()));
         }
     }
