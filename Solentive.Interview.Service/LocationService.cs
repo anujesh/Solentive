@@ -1,33 +1,29 @@
 ﻿using Solentive.Interview.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Solentive.Interview.Data;
-using System.Data.Entity;
 using Solentive.Interview.Service.Interfaces;
+using Solentive.Interview.Data.Infrastructure.Persistance;
 
 namespace Solentive.Interview.Service
 {
     public class LocationService : ILocationService
     {
-        private SeminarDbContext _dbContext = null;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public LocationService()
+        public LocationService(IUnitOfWork unitOfWork)
         {
-            _dbContext = new SeminarDbContext();
+            _unitOfWork = unitOfWork;
         }
 
         public IList<Location> GetLocations()
         {
-            return _dbContext.Locations.ToList();
+            return _unitOfWork.Locations.GetAll().ToList();
         }
 
         public bool AddLocation(Location location)
         {
-            _dbContext.Locations.Add(location);
-            return (_dbContext.SaveChanges() > 0);
+            _unitOfWork.Locations.Add(location);
+            return (_unitOfWork.Save() > 0);
         }
     }
 }

@@ -10,19 +10,11 @@ namespace Solentive.Interview.WebUI
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/validation").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
-
+            bundles.Add(new ScriptBundle("~/bundles/appscripts").Include("~/appScriptsJS/*.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include("~/Scripts/jquery-ui-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/validation").Include("~/Scripts/jquery.unobtrusive*","~/Scripts/jquery.validate*"));
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css"));
-
-            bundles.Add(new StyleBundle("~/Content/custom").Include(
-                        "~/Content/custom.css",
-                        "~/Content/custom-bootstrap.css"));
+            bundles.Add(new StyleBundle("~/Content/custom").Include("~/Content/custom.css","~/Content/custom-bootstrap.css"));
         }
     }
 }

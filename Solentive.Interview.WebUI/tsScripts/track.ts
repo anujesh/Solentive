@@ -27,7 +27,7 @@ $(document).ready(() => {
 });
 
 
-function bindEventsTrack() {
+function bindEventsTrack() { 
     btnSaveTrack.click("click",
         event => {
             if ($("#addTrackForm").valid()) {

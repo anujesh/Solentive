@@ -17,3 +17,6 @@ D:\Solentive\Technical-Test\Solentive.Interview.Service\obj\Debug\Solentive.Inte
 D:\Solentive\Technical-Test\Solentive.Interview.Service\obj\Debug\Solentive.Interview.Service.csproj.CopyComplete
 D:\Solentive\Technical-Test\Solentive.Interview.Service\obj\Debug\Solentive.Interview.Service.dll
 D:\Solentive\Technical-Test\Solentive.Interview.Service\obj\Debug\Solentive.Interview.Service.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.Service\bin\Debug\Solentive.Interview.Data.Infrastructure.dll
+D:\Solentive\Technical-Test\Solentive.Interview.Service\bin\Debug\Solentive.Interview.Data.Infrastructure.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.Service\bin\Debug\Solentive.Interview.Data.Infrastructure.dll.config

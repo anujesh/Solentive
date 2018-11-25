@@ -29,7 +29,19 @@ namespace Solentive.Interview.Data
         #endregion
 
         #region Methods
-
+        public virtual int Commit()
+        {
+            try
+            {
+                var result = base.SaveChanges();
+                return result;
+            }
+            catch (Exception)
+            {
+               
+            }
+            return 0;
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Configure conventions

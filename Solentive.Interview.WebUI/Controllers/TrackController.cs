@@ -25,7 +25,7 @@ namespace Solentive.Interview.WebUI.Controllers
         {
             // Get the source list and map to the view model type.
             var list = _trackService.GetTracks();
-            return View(list);
+            return View("List",list);
         }
 
         [HttpGet]

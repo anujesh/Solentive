@@ -59,6 +59,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Solentive.Interview.Data.Infrastructure\Solentive.Interview.Data.Infrastructure.csproj">
+      <Project>{D19EE819-ECF8-435C-9267-58D09F58AD75}</Project>
+      <Name>Solentive.Interview.Data.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Solentive.Interview.Data\Solentive.Interview.Data.csproj">
       <Project>{4d8fc61c-384e-40ce-ba3f-0ecb82b89fe7}</Project>
       <Name>Solentive.Interview.Data</Name>

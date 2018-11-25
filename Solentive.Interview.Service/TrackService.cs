@@ -6,27 +6,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Solentive.Interview.Data;
 using Solentive.Interview.Service.Interfaces;
+using Solentive.Interview.Data.Infrastructure.Persistance;
+using Solentive.Interview.Data.Infrastructure.Repositories.Interfaces;
 
 namespace Solentive.Interview.Service
 {
     public class TrackService : ITrackService
     {
-        private SeminarDbContext _dbContext = null;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly ITrackRepository _trackRepository;
 
-        public TrackService ()
-	    {
-            _dbContext = new SeminarDbContext();
+
+        public TrackService(IUnitOfWork unitOfWork, ITrackRepository trackRepository)
+        {
+            _unitOfWork = unitOfWork;
+            _trackRepository = trackRepository;
         }
 
         public IList<Track> GetTracks()
         {
-            return _dbContext.Tracks.ToList();
+            return _trackRepository.GetAll().ToList();
         }
 
         public bool AddTrack(Track track)
         {
-            _dbContext.Tracks.Add(track);
-            return (_dbContext.SaveChanges() > 0);
+            _unitOfWork.Tracks.Add(track);
+            return (_unitOfWork.Save() > 0);
         }
     }
 }

@@ -1,26 +1,26 @@
 ﻿using Solentive.Interview.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Solentive.Interview.Data;
 using Solentive.Interview.Service.Interfaces;
+using Solentive.Interview.Data.Infrastructure.Repositories.Interfaces;
+using Solentive.Interview.Data.Infrastructure.Persistance;
 
 namespace Solentive.Interview.Service
 {
     public class SeminarService : ISeminarService
     {
-        private SeminarDbContext _dbContext = null;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly ISeminarRepository _seminarRepository;
 
-        public SeminarService ()
-	    {
-            _dbContext = new SeminarDbContext();
-	    }
+        public SeminarService(IUnitOfWork unitOfWork, ISeminarRepository seminarRepository)
+        {
+            _unitOfWork = unitOfWork;
+            _seminarRepository = seminarRepository;
+        }
 
         public IList<Seminar> GetSeminars()
         {
-            return _dbContext.Seminars.Include("Location").Include("Level").Include("Track").ToList();
+            return _seminarRepository.GetSeminars().ToList();
         }
     }
 }

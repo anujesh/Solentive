@@ -7,7 +7,8 @@
 
 @using (Html.BeginForm("", "", FormMethod.Post, new { @id = "addTrackForm" }))
 {
-    <div class="well">
+    var bl = BundleTable.Bundles;
+    <div class="well container">
         <div class="row">
             <div class="col-md-12">
                 <h2>Tracks - Add</h2>
@@ -18,7 +19,7 @@
                 Name:
             </div>
             <div class="col-md-10">
-                @Html.TextBox("TrackName", Model.Name);
+                @Html.TextBox("Name", Model.Name)
             </div>
         </div>
         <div class="row">
@@ -27,23 +28,16 @@
                 &nbsp;@Html.ValidationMessageFor(i => i.Name)
             </div>
         </div>
-        @if (ViewBag.HasSaved != null && ViewBag.HasSaved)
-        {
-            <div class="row">
-                <div class="col-md-2">&nbsp;</div>
-                <div class="col-md-10">
-                    Saved Successfully
-                </div>
-            </div>
-        }
+        
         <div class="row">
             <div class="col-md-12">
                 <button id="btnSaveTrack" class="btn btn-primary">
                     <span class="glyphicon glyphicon-ok-circle"></span>&nbsp;Save
                 </button>&nbsp;
-                <button id="btnCancelTrack" class="btn btn-primary">
-                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Cancel
-                </button>
+                <a href="@Url.Action("List", "Track")" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                    Cancel
+                </a>
             </div>
         </div>
     </div>

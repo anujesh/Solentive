@@ -284,6 +284,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Logs\error.txt" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <Content Include="Views\Seminar\List.cshtml" />
@@ -327,6 +328,7 @@
     <Content Include="tsScripts\tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="appScriptsJS\" />
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Error\" />
@@ -338,6 +340,10 @@
     <ProjectReference Include="..\Solentive.Interview.Common\Solentive.Interview.Common.csproj">
       <Project>{52ada299-bb95-467a-a5a8-7050a20ebf0d}</Project>
       <Name>Solentive.Interview.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solentive.Interview.Data.Infrastructure\Solentive.Interview.Data.Infrastructure.csproj">
+      <Project>{D19EE819-ECF8-435C-9267-58D09F58AD75}</Project>
+      <Name>Solentive.Interview.Data.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\Solentive.Interview.Data\Solentive.Interview.Data.csproj">
       <Project>{4d8fc61c-384e-40ce-ba3f-0ecb82b89fe7}</Project>

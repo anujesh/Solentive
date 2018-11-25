@@ -10,6 +10,11 @@ namespace Solentive.Interview.WebUI.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Solentive.Interview.Data;
+    using Solentive.Interview.Data.Infrastructure.Persistance;
+    using Solentive.Interview.Data.Infrastructure.Repositories;
+    using Solentive.Interview.Data.Infrastructure.Repositories.Interfaces;
+    using Solentive.Interview.Data.Interfaces;
     using Solentive.Interview.Logging;
     using Solentive.Interview.Logging.Interfaces;
     using Solentive.Interview.Service;
@@ -65,11 +70,17 @@ namespace Solentive.Interview.WebUI.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
             kernel.Bind<ILoggingService>().To<LoggingService>();
             kernel.Bind<ILocationService>().To<LocationService>();
             kernel.Bind<ILevelService>().To<LevelService>();
             kernel.Bind<ISeminarService>().To<SeminarService>();
             kernel.Bind<ITrackService>().To<TrackService>();
+            kernel.Bind<IDbFactory>().To<DbFactory>();
+            kernel.Bind<ITrackRepository>().To<TrackRepository>();
+            kernel.Bind<ISeminarRepository>().To<SeminarRepository>();
+            kernel.Bind<ILevelRepository>().To<LevelRepository>();
+            kernel.Bind<ILocationRepository>().To<LocationRepository>();
         }        
     }
 }

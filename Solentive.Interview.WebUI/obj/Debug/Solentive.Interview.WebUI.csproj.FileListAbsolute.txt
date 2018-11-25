@@ -115,3 +115,6 @@ D:\Solentive\Technical-Test\Solentive.Interview.WebUI\bin\zh-Hant\System.Spatial
 D:\Solentive\Technical-Test\Solentive.Interview.WebUI\obj\Debug\Solentive.Interview.WebUI.csproj.CopyComplete
 D:\Solentive\Technical-Test\Solentive.Interview.WebUI\obj\Debug\Solentive.Interview.WebUI.dll
 D:\Solentive\Technical-Test\Solentive.Interview.WebUI\obj\Debug\Solentive.Interview.WebUI.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.WebUI\bin\Solentive.Interview.Data.Infrastructure.dll
+D:\Solentive\Technical-Test\Solentive.Interview.WebUI\bin\Solentive.Interview.Data.Infrastructure.pdb
+D:\Solentive\Technical-Test\Solentive.Interview.WebUI\bin\Solentive.Interview.Data.Infrastructure.dll.config
